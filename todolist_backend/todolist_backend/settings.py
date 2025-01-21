@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-drwxw=s!5w%ah7cbjmkt6zkv&-$k8f0uvw*ej7$mrlsn%&*b_+
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    todolist-wb4m.onrender.com
+    'todolist-wb4m.onrender.com'
 ]
 
 
