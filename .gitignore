@@ -2,7 +2,9 @@
 .DS_Store
 
 # VSCode 配置文件夹
-.vscode/
+.vscode
 
 # 虚拟环境变量
-env/
+env
+
+node_modules

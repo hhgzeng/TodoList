@@ -84,9 +84,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'todolist',          # 数据库名
         'USER': 'root',                  # 数据库用户名
-        'PASSWORD': 'l4tvfmcz',     # 数据库密码
-        'HOST': 'dbconn.sealoshzh.site',             # 数据库地址
-        'PORT': '47361',                  # 数据库端口
+        'PASSWORD': '15074731159zj',     # 数据库密码
+        'HOST': '127.0.0.1',             # 数据库地址
+        'PORT': '3306',                  # 数据库端口
     }
 }
 
