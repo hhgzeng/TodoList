@@ -9,10 +9,10 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import pymysql
-pymysql.install_as_MySQLdb()
-
-from pathlib import Path
+# import pymysql # mysql
+# pymysql.install_as_MySQLdb()
+import dj_database_url
+from pathlib import Path # postgresql
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -79,16 +79,21 @@ WSGI_APPLICATION = 'todolist_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASE_URL = 'mysql://root:15074731159zj@127.0.0.1:3306/todolist'  # localhost
+DATABASE_URL = 'postgresql://todolist_ms0n_user:S2SJrVuIcCYptCgmcTnrxtGHYdYNRKOI@dpg-cu2gje5ds78s73dsrr0g-a.singapore-postgres.render.com/todolist_ms0n' # web
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'todolist',          # 数据库名
-        'USER': 'root',                  # 数据库用户名
-        'PASSWORD': '15074731159zj',     # 数据库密码
-        'HOST': '127.0.0.1',             # 数据库地址
-        'PORT': '3306',                  # 数据库端口
-    }
+    'default': dj_database_url.parse(DATABASE_URL)
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'todolist',          # 数据库名
+#         'USER': 'root',                  # 数据库用户名
+#         'PASSWORD': '15074731159zj',     # 数据库密码
+#         'HOST': '127.0.0.1',             # 数据库地址
+#         'PORT': '3306',                  # 数据库端口
+#     }
+# }
 
 
 # Password validation
